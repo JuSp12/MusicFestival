@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reggae festival</title>
+
+  <!-- front icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- css file -->
+  <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+
+<body>
+  <div class="navigation">
+    <!-- Navigation bar-->
+    <nav id="navbar" class="nav">
+      <i class="fas fa-bars menu-btn"></i>
+
+      <a href="/index">
+        <img src="/images/logo.png" alt="logo">
+      </a>
+
+      <div class="links">
+        <a href="/index" target="_self">Home</a>
+        <a href="/about" target="_self">About</a>
+        <a href="/index#lineup">LineUp</a>
+        <a href="/index#festZone">FestZone</a>
+        <a href="/index#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Main info about festival -->
+    <div class="home">
+      <div class="container">
+        <div class="content">
+          <h1>Welcome to David's Reggae Festival</h1>
+          <p>
+            Get ready for an unforgettable celebration of music, culture, and good vibes at the Reggae Festival! Join us
+            on
+            <br><span>June 20, 2027</span> <br>for a day filled with rhythmic beats, soulful melodies, and positive
+            energy.
+          </p>
+          <a href="#" class="row-btn">Subscribe</a>
+        </div>
+
+        <!-- Date counter -->
+        <div class="dayCounting">
+          <div id="countdown" class="countdown">
+            <div class="countdown-item">
+              <span class="countdown-value" id="days"></span>
+              <span class="countdown-label">days</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-value" id="hours"></span>
+              <span class="countdown-label">hours</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-value" id="minutes"></span>
+              <span class="countdown-label">minutes</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-value" id="seconds"></span>
+              <span class="countdown-label">second</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lineup section -->
+  <div class="subHome" id="lineup">
+    <h3>Artists</h3>
+    <div class="choose">
+      <button class="btn-year" onclick="getYear(2024)"><span>2024</span></button>
+      <button class="btn-year" onclick="getYear(2023)"><span>2023</span></button>
+      <button class="btn-year" onclick="getYear(2022)"><span>2022</span></button>
+      <button class="btn-year" onclick="getYear(2021)"><span>2021</span></button>
+      <button class="btn-year" onclick="getYear(2020)"><span>2020</span></button>
+    </div>
+    <div class="wyniki-container" id="wyniki"></div>
+    <div class="lineup-container" id="lineup-results"></div>
+  </div>
+
+  <!-- Fest Zone section -->
+  <div class="subHome" id="festZone">
+    <h3>Fest Zone</h3>
+    <div class="wrapper">
+      <div class="card">
+        <span></span>
+        <div class="image">
+          <img src="images/image_1.png" alt="">
+        </div>
+        <div class="text">
+          <div class="content">
+            <h2>Kid's Zone</h2>
+            <p>
+              Families are welcome to join in the fun! Our Kid's Zone offers a variety of activities and
+              entertainment suitable for children of all ages. From face painting to interactive games,
+              there's something for everyone to enjoy.
+            </p>
+            <button class="btn">Know More</button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <span></span>
+        <div class="image">
+          <img src="images/image_2.png" alt="">
+        </div>
+        <div class="text">
+          <div class="content">
+            <h2>Yoga Zone</h2>
+            <p>
+              Take a break from the excitement and unwind in our Yoga Zone. Join experienced instructors
+              for rejuvenating yoga sessions set to the soothing sounds of reggae music. Connect with your
+              body, mind, and soul as you find your inner peace in this tranquil oasis.
+            </p>
+            <button class="btn">Know More</button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <span></span>
+        <div class="image">
+          <img src="images/image_3.png" alt="">
+        </div>
+        <div class="text">
+          <div class="content">
+            <h2>Food Zone</h2>
+            <p>
+              The food zone offers a vibrant and diverse culinary experience with food trucks featuring a
+              tantalizing array of flavors inspired by Caribbean cuisine and beyond. From traditional jerk
+              chicken and spicy curries to refreshing tropical fruit salads and delectable vegetarian
+              options, there's something to satisfy every palate.
+            </p>
+            <button class="btn">Know More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact form section -->
+  <div class="subHome" id="contact">
+    <h3>Contact Us</h3>
+    <div class="wrapper">
+      <form id="myForm" action="/submit" method="POST">
+        <div class="row">
+
+          <div class="input-box">
+            <input type="text" id="name" name="name" required>
+            <div class="line"></div>
+            <label for="">First Name</label>
+          </div>
+
+          <div class="input-box">
+            <input type="text" id="surname" name="surname" required>
+            <div class="line"></div>
+            <label for="">Last Name</label>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="input-box">
+            <input type="text" id="email" name="email" required>
+            <div class="line"></div>
+            <label for="">Email Address</label>
+          </div>
+
+          <div class="input-box">
+            <input type="text" id="phone" name="phone" required>
+            <div class="line"></div>
+            <label for="">Phone Number</label>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="input-box textarea">
+            <textarea rows="8" cols="80" id="additionalMessage" name="additionalMessage" required></textarea>
+            <br>
+            <div class="line"></div>
+            <label for="">Write your message</label>
+            <br>
+          </div>
+        </div>
+
+        <div class="row-btn">
+          <div class="input-box">
+            <div class="layer"></div>
+            <input type="submit">
+          </div>
+        </div>
+        <div>
+          <p id="message">
+            <%= message %>
+          </p> <!-- Using EJS templates to render the message -->
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer section -->
+  <footer>
+    <div class="socialIcons">
+      <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://open.spotify.com/"><i class="fa-brands fa-spotify"></i></a>
+      <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+
+    <div class="information">
+      <a href="/about#faq" target="_self">FQA</a> |
+      <a href="/privacy" target="_self">PRIVACY POLICY</a> |
+      <a href="/terms" target="_self">TERMS & CONDITIONS</a>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="/js/script.js"></script>
+  
+
+</body>
+
+</html>
