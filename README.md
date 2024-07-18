@@ -25,7 +25,7 @@ Clone the repository:
 
 sh
 Copy code
-git clone [https://github.com/JuSp12/David-sMusicFestival.git](https://github.com/JuSp12/David-sMusicFestival.git)
+git clone [https://github.com/JuSp12/MusicFestival.git](https://github.com/JuSp12/MusicFestival.git)
 Install the dependencies:
 
 sh
